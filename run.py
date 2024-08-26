@@ -61,6 +61,18 @@ def take_money():
     machine_status['money'] = 0
 
 
+def fill_machine_ingredients():
+    """
+    The function replenishes the supply of ingredients in the machine 
+    taking input from the user.
+    """
+
+    machine_status['water'] += int(input("Write how many ml of water you want to add:\n"))
+    machine_status['milk'] += int(input("Write how many ml of milk you want to add:\n"))
+    machine_status['coffee'] += int(input("Write how many grams of coffee beans you want to add:\n"))
+    machine_status['cups'] += int(input("Write how many disposable cups you want to add:\n"))
+
+
 def check_machine_action(action):
     global status
 
@@ -83,7 +95,7 @@ def start_coffee_machine():
     The function that starts the machine and pass the input action
     """
     while status:
-        action = input(f"Write action (buy, fill, take, remaining, exit):")
+        action = input(f"Write action (buy, fill, take, remaining, exit):\n")
         check_machine_action(action.lower())
 
 
