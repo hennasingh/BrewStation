@@ -67,10 +67,10 @@ def fill_machine_ingredients():
     taking input from the user.
     """
 
-    machine_status['water'] += int(input("Write how many ml of water you want to add:\n"))
-    machine_status['milk'] += int(input("Write how many ml of milk you want to add:\n"))
-    machine_status['coffee'] += int(input("Write how many grams of coffee beans you want to add:\n"))
-    machine_status['cups'] += int(input("Write how many disposable cups you want to add:\n"))
+    for key in machine_status:
+        if key != "money":
+            machine_status[key] += int(input("Write how much {} you want to add:\n".format(key)))    
+    machine_stats()
 
 
 def check_machine_action(action):
