@@ -49,6 +49,18 @@ def machine_stats():
     console.print(f"${machine_status['money']} of money")
 
 
+def take_money():
+    """
+    The function gives all the money within machine and change value to zero
+    """
+    if machine_status['money'] == 0:
+        console.print(":unamused_face: There is [red]0[/] balance in the machine, you have taken all !" )
+        return
+    
+    console.print(f"I give you ${machine_status['money']} and machine has [red]0[/] balance", style="bold grey37")
+    machine_status['money'] = 0
+
+
 def check_machine_action(action):
     global status
 
@@ -57,7 +69,7 @@ def check_machine_action(action):
     elif action == "fill":
         fill_machine_ingredients()
     elif action == "take":
-        pass
+        take_money()
     elif action == 'remaining':
         machine_stats()
     elif action == 'exit':
