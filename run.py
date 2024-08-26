@@ -27,8 +27,13 @@ console.print("""
     Ready to pour your passion into the perfect cup? Let’s get brewing! 
     """, style="bold green")
 
+
+## Define variables
+
+#status to control the flow of machine
 status = True
 
+# Default machine ingredients stats
 machine_status = {
     'water':400,
     'milk' : 540,
@@ -36,6 +41,11 @@ machine_status = {
     'cups': 9,
     'money': 550
 }
+
+# water, milk, coffee, cup, cost
+espresso = [250, 0, 16, 1, -4]
+latte = [350, 75, 20, 1, -7]
+cappuccino = [200, 100, 12, 1, -6]
 
 def machine_stats():
     """
@@ -73,11 +83,34 @@ def fill_machine_ingredients():
     machine_stats()
 
 
+def buy_coffee():
+    """"
+    The function displays coffee choices to the user and ask for a choice or go back to the main menu
+    """
+    user_choice = input("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:\n")
+
+    message = ''
+    if user_choice == '1':
+       message =  get_coffee(espresso)
+    elif user_choice == '2':
+        message = get_coffee(latte)
+    elif user_choice == '3':
+        message = get_coffee(cappuccino)
+    elif user_choice == 'back':
+        return
+    else:
+        print("Invalid choice")
+        buy_coffee()
+
+    print(message)
+
+
+
 def check_machine_action(action):
     global status
 
     if action == "buy":
-        pass
+        buy_coffee()
     elif action == "fill":
         fill_machine_ingredients()
     elif action == "take":
