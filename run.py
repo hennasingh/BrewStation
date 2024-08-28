@@ -77,10 +77,27 @@ def fill_machine_ingredients():
     taking input from the user.
     """
 
-    for key in machine_status:
-        if key != "money":
-            machine_status[key] += int(input("Write how much {} you want to add:\n".format(key)))    
+    console.print("Please enter water in ml and coffee in grams", style="green")
+    console.print("The machine cannot take more than 2000 ml of water, 2000 ml of milk, 1000 grams of coffee and 20 disposable cups", style="yellow")
     machine_stats()
+
+    try:
+        for key in machine_status:
+            if key != "money":
+                value = int(input("Write how much amount of {} you want to add:\n".format(key)))
+                if value < 0:
+                    raise ValueError("Please enter a positive value")
+                if (key == "water" or key == "milk") and machine_status[key] + value > 2000:
+                    raise ValueError("The entered value exceeds 2000 ml for {}, please enter amount below 2000".format(key))
+                if(key == "coffee" and machine_status[key] + value > 1000):
+                    raise ValueError("The entered value exceeds 1000 grams for coffee. Please enter a value equal to or below {}".format((1000 - machine_status[key])))
+                if key == "cups" and machine_status[key] + value > 20:
+                    raise ValueError("The entered value exceeds 20 disposable cups that machine can take. please enter a value equal or below {}".format((20 - machine_status[key])))                  
+            machine_status[key]+= value
+        machine_stats()
+    except ValueError as e:
+        console.print("Invalid data: {}, please try again". format(e), style="dark_red")
+
 
 
 def get_coffee(choice, coffee):
@@ -153,7 +170,7 @@ def start_coffee_machine():
     The function that starts the machine and pass the input action
     """
     while status:
-        action = input(":smile:\00 Write action (buy, fill, take, remaining, exit):\n")
+        action = input("Write action (buy, fill, take, remaining, exit):\n")
         check_machine_action(action.lower())
 
 
