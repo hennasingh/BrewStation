@@ -3,7 +3,7 @@ from art import *
 
 console = Console()
 
-tprint("Arya's BrewStation", font="bulbhead")
+tprint("BrewStation")
 console.print(r"""
         /~~~~~~~~~~~~~~~~~~~/|                   {
        /              /######/ / |       }    }    {  
@@ -22,7 +22,7 @@ console.print(r"""
     """, style="bold yellow")
 
 console.print("""
-    Welcome to Arya's BrewStation! Whether you're a coffee newbie or a seasoned 
+    Welcome to BrewStation! Whether you're a coffee newbie or a seasoned 
     sipper, BrewStation turns every brew into an adventure. 
     Ready to pour your passion into the perfect cup? Let’s get brewing! 
     """, style="bold green")
@@ -83,6 +83,30 @@ def fill_machine_ingredients():
     machine_stats()
 
 
+def get_coffee(choice, coffee):
+    """
+    The function calculates the ingredients required for the choice of coffee and keep
+    a log of remaining amount
+    :param choice: The selected choice of coffee
+    :return: message based on resources
+    """
+
+    if machine_status['water'] < choice[0]:
+        return ":upside-down_face: Sorry, not enough water!"
+    elif machine_status['milk'] < choice[1]:
+        return "upside-down_face: Sorry, not enough milk!"
+    elif machine_status['coffee'] < choice[2]:
+        return ":upside-down_face: Sorry, not enough coffee!"
+    elif machine_status['cups'] < choice[3]:
+        return ":upside-down_face: Sorry, not enough disposable cups!"
+
+    # Deduct the ingredients
+    for key, value in zip(machine_status, choice):
+        machine_status[key] -= value
+
+    return ":smiley: I have enough resources, making you a {}!".format(coffee)
+
+
 def buy_coffee():
     """"
     The function displays coffee choices to the user and ask for a choice or go back to the main menu
@@ -90,19 +114,20 @@ def buy_coffee():
     user_choice = input("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:\n")
 
     message = ''
+        
     if user_choice == '1':
-       message =  get_coffee(espresso)
+        message =  get_coffee(espresso, "espresso")
     elif user_choice == '2':
-        message = get_coffee(latte)
+        message = get_coffee(latte, "latte")
     elif user_choice == '3':
-        message = get_coffee(cappuccino)
+        message = get_coffee(cappuccino, "cappuccino")
     elif user_choice == 'back':
         return
     else:
         print("Invalid choice")
         buy_coffee()
 
-    print(message)
+    console.print(message)
 
 
 
@@ -120,7 +145,7 @@ def check_machine_action(action):
     elif action == 'exit':
         status = False
     else:
-        print("Invalid action")
+        console.print("Invalid action", style="dark_red")
 
 
 def start_coffee_machine():
