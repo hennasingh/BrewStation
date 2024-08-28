@@ -51,7 +51,7 @@ def machine_stats():
     """
     The function prints the ingredients available in the machine
     """
-    console.print("The coffee machine has:")
+    console.print("The coffee machine has:", style="purple3")
     console.print(f"{machine_status['water']} ml of water")
     console.print(f"{machine_status['milk']} ml of milk")
     console.print(f"{machine_status['coffee']} g of coffee beans")
@@ -64,10 +64,10 @@ def take_money():
     The function gives all the money within machine and change value to zero
     """
     if machine_status['money'] == 0:
-        console.print(":unamused_face: There is [red]0[/] balance in the machine, you have taken all !" )
+        console.print(":unamused_face:\00 There is [red]0[/] balance in the machine, you have taken all !", style="plum4" )
         return
     
-    console.print(f"I give you ${machine_status['money']} and machine has [red]0[/] balance", style="bold grey37")
+    console.print(f"I give you ${machine_status['money']} and machine has [red]0[/] balance", style="bold plum4")
     machine_status['money'] = 0
 
 
@@ -92,19 +92,19 @@ def get_coffee(choice, coffee):
     """
 
     if machine_status['water'] < choice[0]:
-        return ":upside-down_face: Sorry, not enough water!"
+        return ":upside-down_face:\00 Sorry, not enough water!"
     elif machine_status['milk'] < choice[1]:
-        return "upside-down_face: Sorry, not enough milk!"
+        return "upside-down_face:\00 Sorry, not enough milk!"
     elif machine_status['coffee'] < choice[2]:
-        return ":upside-down_face: Sorry, not enough coffee!"
+        return ":upside-down_face:\00 Sorry, not enough coffee!"
     elif machine_status['cups'] < choice[3]:
-        return ":upside-down_face: Sorry, not enough disposable cups!"
+        return ":upside-down_face:\00 Sorry, not enough disposable cups!"
 
     # Deduct the ingredients
     for key, value in zip(machine_status, choice):
         machine_status[key] -= value
 
-    return ":smiley: I have enough resources, making you a {}!".format(coffee)
+    return ":smiley:\00 I have enough resources, making you a {}!".format(coffee)
 
 
 def buy_coffee():
@@ -124,7 +124,7 @@ def buy_coffee():
     elif user_choice == 'back':
         return
     else:
-        print("Invalid choice")
+        console.print("Invalid choice. Please try again", style="dark_red")
         buy_coffee()
 
     console.print(message)
@@ -145,7 +145,7 @@ def check_machine_action(action):
     elif action == 'exit':
         status = False
     else:
-        console.print("Invalid action", style="dark_red")
+        console.print("Invalid action, Please try again!", style="dark_red")
 
 
 def start_coffee_machine():
@@ -153,7 +153,7 @@ def start_coffee_machine():
     The function that starts the machine and pass the input action
     """
     while status:
-        action = input(f"Write action (buy, fill, take, remaining, exit):\n")
+        action = input(":smile:\00 Write action (buy, fill, take, remaining, exit):\n")
         check_machine_action(action.lower())
 
 
