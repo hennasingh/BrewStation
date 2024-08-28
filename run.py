@@ -64,7 +64,7 @@ def take_money():
     The function gives all the money within machine and change value to zero
     """
     if machine_status['money'] == 0:
-        console.print(":unamused_face:\00 There is [red]0[/] balance in the machine, you have taken all !", style="plum4" )
+        console.print(":unamused_face:\0020 There is [red]0[/] balance in the machine, you have taken all !", style="plum4" )
         return
     
     console.print(f"I give you ${machine_status['money']} and machine has [red]0[/] balance", style="bold plum4")
@@ -121,13 +121,14 @@ def get_coffee(choice, coffee):
     for key, value in zip(machine_status, choice):
         machine_status[key] -= value
 
-    return ":smiley:\00 I have enough resources, making you a {}!".format(coffee)
+    return ":smiley:\0020 I have enough resources, making you a {}!".format(coffee)
 
 
 def buy_coffee():
     """"
     The function displays coffee choices to the user and ask for a choice or go back to the main menu
     """
+    print("\n")
     user_choice = input("What do you want to buy?\n 1 - espresso\n 2 - latte\n 3 - cappuccino\n  back - to main menu:\n")
 
     message = ''
@@ -144,7 +145,9 @@ def buy_coffee():
         console.print("Invalid choice. Please enter numeric numbers (1 -3) or enter 'back", style="dark_red")
         buy_coffee()
 
-    console.print(message)
+    print("\n")
+    console.print(message + "\n")
+    
 
 
 
@@ -171,7 +174,7 @@ def start_coffee_machine():
     """
     while status:
         action = input(
-        "Write action (buy, fill...): \n \U0001F60B Buy coffee \n \U0001F47E Fill Ingredients \n \U0001F911 Take money \n \U0001F47B Remaining \n \U0001F62D Exit\n")
+        "Write action (buy, fill...): \n \U0001F60B \u0020 Buy coffee \n \U0001F47E \u0020 Fill Ingredients \n \U0001F911 \u0020 Take money \n \U0001F47B \u0020 Remaining \n \U0001F62D \u0020 Exit\n")
         check_machine_action(action.lower())
 
 
