@@ -128,7 +128,7 @@ def buy_coffee():
     """"
     The function displays coffee choices to the user and ask for a choice or go back to the main menu
     """
-    user_choice = input("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:\n")
+    user_choice = input("What do you want to buy?\n 1 - espresso\n 2 - latte\n 3 - cappuccino\n  back - to main menu:\n")
 
     message = ''
         
