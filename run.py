@@ -141,7 +141,7 @@ def buy_coffee():
     elif user_choice == 'back':
         return
     else:
-        console.print("Invalid choice. Please try again", style="dark_red")
+        console.print("Invalid choice. Please enter numeric numbers (1 -3) or enter 'back", style="dark_red")
         buy_coffee()
 
     console.print(message)
@@ -151,11 +151,11 @@ def buy_coffee():
 def check_machine_action(action):
     global status
 
-    if action == "buy":
+    if action in ("buy", "buy coffee"):
         buy_coffee()
-    elif action == "fill":
+    elif action in ("fill", "fill ingredients"):
         fill_machine_ingredients()
-    elif action == "take":
+    elif action in ("take", "take money"):
         take_money()
     elif action == 'remaining':
         machine_stats()
@@ -170,7 +170,8 @@ def start_coffee_machine():
     The function that starts the machine and pass the input action
     """
     while status:
-        action = input("Write action (buy, fill, take, remaining, exit):\n")
+        action = input(
+        "Write action (buy, fill...): \n \U0001F60B Buy coffee \n \U0001F47E Fill Ingredients \n \U0001F911 Take money \n \U0001F47B Remaining \n \U0001F62D Exit\n")
         check_machine_action(action.lower())
 
 
