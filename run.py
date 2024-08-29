@@ -77,14 +77,14 @@ def fill_machine_ingredients():
     taking input from the user.
     """
 
-    console.print("Please enter water in ml and coffee in grams", style="green")
-    console.print("The machine cannot take more than 2000 ml of water, 2000 ml of milk, 1000 grams of coffee and 20 disposable cups", style="yellow")
+    console.print("\n Please enter water in ml and coffee in grams\n", style="green")
+    console.print("The machine cannot take more than 2000 ml of water, 2000 ml of milk, 1000 grams of coffee and 20 disposable cups\n", style="yellow")
     machine_stats()
 
     try:
         for key in machine_status:
             if key != "money":
-                value = int(input("Write how much amount of {} you want to add:\n".format(key)))
+                value = int(input("\nWrite how much amount of {} you want to add:\n".format(key)))
                 if value < 0:
                     raise ValueError("Please enter a positive value")
                 if (key == "water" or key == "milk") and machine_status[key] + value > 2000:
@@ -96,7 +96,7 @@ def fill_machine_ingredients():
             machine_status[key]+= value
         machine_stats()
     except ValueError as e:
-        console.print("Invalid data: {}, please try again". format(e), style="dark_red")
+        console.print("\nInvalid data: {}, please try again". format(e), style="dark_red")
 
 
 
@@ -109,27 +109,27 @@ def get_coffee(choice, coffee):
     """
 
     if machine_status['water'] < choice[0]:
-        return ":upside-down_face:\00 Sorry, not enough water!"
+        return ":upside-down_face:\u0020 Sorry, not enough water!"
     elif machine_status['milk'] < choice[1]:
-        return "upside-down_face:\00 Sorry, not enough milk!"
+        return "upside-down_face:\u0020 Sorry, not enough milk!"
     elif machine_status['coffee'] < choice[2]:
-        return ":upside-down_face:\00 Sorry, not enough coffee!"
+        return ":upside-down_face:\u0020 Sorry, not enough coffee!"
     elif machine_status['cups'] < choice[3]:
-        return ":upside-down_face:\00 Sorry, not enough disposable cups!"
+        return ":upside-down_face:\u0020 Sorry, not enough disposable cups!"
 
     # Deduct the ingredients
     for key, value in zip(machine_status, choice):
         machine_status[key] -= value
 
-    return ":smiley:\0020 I have enough resources, making you a {}!".format(coffee)
+    return ":smiley:\u0020 I have enough resources, making you a {}!".format(coffee)
 
 
 def buy_coffee():
     """"
     The function displays coffee choices to the user and ask for a choice or go back to the main menu
     """
-    print("\n")
-    user_choice = input("What do you want to buy?\n 1 - espresso\n 2 - latte\n 3 - cappuccino\n  back - to main menu:\n")
+
+    user_choice = input("\nWhat do you want to buy?\n 1 - espresso\n 2 - latte\n 3 - cappuccino\n  back - to main menu:\n")
 
     message = ''
         
@@ -142,11 +142,10 @@ def buy_coffee():
     elif user_choice == 'back':
         return
     else:
-        console.print("Invalid choice. Please enter numeric numbers (1 -3) or enter 'back", style="dark_red")
+        console.print("\nInvalid choice. Please enter numeric numbers (1 -3) or enter 'back", style="dark_red")
         buy_coffee()
 
-    print("\n")
-    console.print(message + "\n")
+    console.print(message)
     
 
 
@@ -165,7 +164,7 @@ def check_machine_action(action):
     elif action == 'exit':
         status = False
     else:
-        console.print("Invalid action, Please try again!", style="dark_red")
+        console.print("\nInvalid action, Please try again!", style="dark_red")
 
 
 def start_coffee_machine():
@@ -174,7 +173,7 @@ def start_coffee_machine():
     """
     while status:
         action = input(
-        "Write action (buy, fill...): \n \U0001F60B \u0020 Buy coffee \n \U0001F47E \u0020 Fill Ingredients \n \U0001F911 \u0020 Take money \n \U0001F47B \u0020 Remaining \n \U0001F62D \u0020 Exit\n")
+        "\nWrite action (buy, fill...): \n \U0001F60B \u0020 Buy coffee \n \U0001F47E \u0020 Fill Ingredients \n \U0001F911 \u0020 Take money \n \U0001F47B \u0020 Remaining \n \U0001F62D \u0020 Exit\n")
         check_machine_action(action.lower())
 
 
