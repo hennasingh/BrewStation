@@ -51,7 +51,7 @@ def machine_stats():
     """
     The function prints the ingredients available in the machine
     """
-    console.print("The coffee machine has:", style="purple3")
+    console.print("\nThe coffee machine has:", style="purple3")
     console.print(f"{machine_status['water']} ml of water")
     console.print(f"{machine_status['milk']} ml of milk")
     console.print(f"{machine_status['coffee']} g of coffee beans")
@@ -64,10 +64,10 @@ def take_money():
     The function gives all the money within machine and change value to zero
     """
     if machine_status['money'] == 0:
-        console.print(":unamused_face:\0020 There is [red]0[/] balance in the machine, you have taken all !", style="plum4" )
+        console.print(":unamused_face:\u0020 There is [red]0[/] balance in the machine, you have taken all !", style="plum4" )
         return
     
-    console.print(f"I give you ${machine_status['money']} and machine has [red]0[/] balance", style="bold plum4")
+    console.print(f"\nI give you ${machine_status['money']} and machine has [red]0[/] balance", style="bold plum4")
     machine_status['money'] = 0
 
 
