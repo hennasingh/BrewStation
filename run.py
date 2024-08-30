@@ -1,5 +1,6 @@
 from rich.console import Console 
 from art import *
+import coffee
 
 console = Console()
 
@@ -64,7 +65,7 @@ def take_money():
     The function gives all the money within machine and change value to zero
     """
     if machine_status['money'] == 0:
-        console.print(":unamused_face:\u0020 There is [red]0[/] balance in the machine, you have taken all !", style="plum4" )
+        console.print("\n:unamused_face:\u0020 There is [red]0[/] balance in the machine, you have taken all !", style="plum4" )
         return
     
     console.print(f"\nI give you ${machine_status['money']} and machine has [red]0[/] balance", style="bold plum4")
@@ -146,6 +147,10 @@ def buy_coffee():
         buy_coffee()
 
     console.print(message)
+
+    if "I have" in message:
+        # Run the animation
+        coffee.fill_coffee_mug()
     
 
 
