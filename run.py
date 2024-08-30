@@ -85,7 +85,7 @@ def fill_machine_ingredients():
     try:
         for key in machine_status:
             if key != "money":
-                value = int(input("\nWrite how much amount of {} you want to add:\n".format(key))).strip()
+                value = int(input("\nWrite how much amount of {} you want to add:\n".format(key)).strip())
                 if value < 0:
                     raise ValueError("Please enter a positive value")
                 if (key == "water" or key == "milk") and machine_status[key] + value > 2000:
