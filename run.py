@@ -85,7 +85,7 @@ def fill_machine_ingredients():
     try:
         for key in machine_status:
             if key != "money":
-                value = int(input("\nWrite how much amount of {} you want to add:\n".format(key)))
+                value = int(input("\nWrite how much amount of {} you want to add:\n".format(key))).strip()
                 if value < 0:
                     raise ValueError("Please enter a positive value")
                 if (key == "water" or key == "milk") and machine_status[key] + value > 2000:
@@ -130,7 +130,7 @@ def buy_coffee():
     The function displays coffee choices to the user and ask for a choice or go back to the main menu
     """
 
-    user_choice = input("\nWhat do you want to buy?\n 1 - espresso\n 2 - latte\n 3 - cappuccino\n  back - to main menu:\n")
+    user_choice = input("\nWhat do you want to buy?\n 1 - espresso\n 2 - latte\n 3 - cappuccino\n  back - to main menu:\n").strip()
 
     message = ''
         
@@ -179,7 +179,7 @@ def start_coffee_machine():
     while status:
         action = input(
         "\nWrite action (buy, fill...): \n \U0001F60B \u0020 Buy coffee \n \U0001F47E \u0020 Fill Ingredients \n \U0001F911 \u0020 Take money \n \U0001F47B \u0020 Remaining \n \U0001F62D \u0020 Exit\n")
-        check_machine_action(action.lower())
+        check_machine_action(action.strip().lower())
 
 
 start_coffee_machine()
