@@ -1,4 +1,12 @@
+# BrewStation 
 
+Brewstation is a Python terminal coffee simulator program, which runs in a mock terminal on Heroku.
+
+Users can perform various actions like buy, fill or check machine status. The program displays some ASCII art and shows a coffee animation. 
+
+![Coffee Simulator Responsive Image](/readme-content/responsiveUI.png)
+
+Live version: https://brewstation-4e76688e07ae.herokuapp.com/
 
 ### Credits
 - [ascii art](https://ascii.co.uk/art/coffee) - For Coffee ASCII Art
