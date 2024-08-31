@@ -15,6 +15,14 @@
             background: #000000;
         }
 
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 120px;
+        }
+
         /**
         * Default styles for xterm.js
         */
@@ -85,7 +93,6 @@
             top: 0;
             bottom: 0;
             background-color: rgb(0, 0, 0);
-            width: 730px;
         }
 
         .xterm .xterm-screen {
@@ -170,6 +177,8 @@
     </style>
 </head>
 
-@{body}
+<div id="container">
+    @{body}
+</div>
 
 </html>
