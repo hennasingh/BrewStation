@@ -42,7 +42,11 @@ The flowchart for the coffee machine simulator is as below:
 
 ChatGPT was used for coffee animations. For text colors, Rich Text library was used. Coffee ASCII art is taken from https://ascii.co.uk/art/coffee with my own minor additions.
 
+## Features
 
+### Existing Features
+
+- A welcome screen with ASCII art and predefined menu is displayed.
 
 ## Deployment
 
@@ -66,20 +70,30 @@ This project was deployed using Code Institute's mock terminal for Heroku.
 - [Python](https://www.python.org/) - Main language for the terminal program
 - [Gitpod](https://www.gitpod.io/#get-started) - Used to code the project and save to online repo
 - [Github](https://github.com/) - For version control
-- [PythonGPT](https://openai.com/chatgpt/) - For Coffee animation code
 
 ### Python Packages
 
 - [Rich Text](https://pypi.org/project/rich/) - For adding colors to text
-- [ascii art](https://ascii.co.uk/art/coffee) - For Coffee ASCII Art
+- [Art](https://pypi.org/project/art/) - For heading font style
 
 
-### Credits
+## Credits
+
+### Content
 
 - [Stack Overflow](https://stackoverflow.com/questions/52335970/how-to-fix-syntaxwarning-invalid-escape-sequence-in-python) - For correcting invalid excape sequence warning
 - [Jetbrains Python Academy](https://github.com/Flor91/jetbrains-python-academy/tree/master/Coffee%20Machine) - For inspiration on Coffee Machine project
-- [Geeks for Geeks](https://www.geeksforgeeks.org/python-program-to-print-emojis/) - Unicodes to print emojis
 
+### Media
+- [Geeks for Geeks](https://www.geeksforgeeks.org/python-program-to-print-emojis/) - Unicodes to print emojis
+- [ascii art](https://ascii.co.uk/art/coffee) - For Coffee ASCII Art
+- [PythonGPT](https://openai.com/chatgpt/) - For Coffee animation code
+
+
+## Acknowledgements
+- [Code Institute](https://codeinstitute.net/) for Python essentials and Love Sandwiches project
+- Spencer Barriball  - For his guidance and review on the project
+- Code Institute Slack Community - For feedback, reviews and community support.
 
 
 
