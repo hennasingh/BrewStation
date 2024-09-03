@@ -48,6 +48,32 @@ ChatGPT was used for coffee animations. For text colors, Rich Text library was u
 
 - A welcome screen with ASCII art and predefined menu is displayed.
 
+![Welcome msg and Menu Options](./readme-content/welcomeMenu.png)
+
+- Entering buy coffee displays options to buy or go back to main meny again.
+
+![Coffee menu display](./readme-content/buyMenu.png)
+
+- If enough resources, coffee animation and a success displayed.
+
+![Coffee animation and successful buy message](./readme-content/successBuy.png)
+
+- If not enough resources, a message specifying the resource is displayed.
+
+![Not enough resources for coffee message](./readme-content/failedBuy.png)
+
+- Entering take gives away collected money and money is updated.
+
+![amount of money given and left message](./readme-content/takeMessage.png)
+
+- Entering  Remaining display machine ingredients status on that moment.
+
+![coffee ingredients value message](./readme-content/statsMessage.png)
+
+- Entering fill display machine stats and specify machine capacity and ask for amount of each ingredient
+
+![coffee stats and capacity message](./readme-content/fillMessage.png)
+
 ## Deployment
 
 This project was deployed using Code Institute's mock terminal for Heroku.
