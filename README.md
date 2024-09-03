@@ -32,7 +32,7 @@ Python is a new language for me and I wanted to make a program that would help m
 - Add a fortune cookie option to engage the user
 - Give an option to withdraw virtual money and exit
 
-## Structure
+### Structure
 
 The flowchart for the coffee machine simulator is as below:
 
@@ -44,6 +44,20 @@ ChatGPT was used for coffee animations. For text colors, Rich Text library was u
 
 
 
+## Deployment
+
+This project was deployed using Code Institute's mock terminal for Heroku.
+
+### Steps
+- Create an account on Heroku.
+- Navigate to Heroku Dashboard and "Create a New App".
+- Input App name and choose a region you are closer to.
+- Select "Settings" from the table, and search for "Buildpack"
+- Add "python" and "nodejs" from the list, in that order.
+- Go to Deploy section, connect to GitHub.
+- Seach for the repository name to connect.
+- Click on Deploy Branch or enable Automatic Deploy.
+- Allow a few minutes and view the deployed program.
 
 
 ## Technologies Used
