@@ -8,7 +8,41 @@ Users can perform various actions like buy, fill or check machine status. The pr
 
 Live version: https://brewstation-4e76688e07ae.herokuapp.com/
 
-## Design
+## User Experience - UX
+
+### Strategy
+
+Python is a new language for me and I wanted to make a program that would help me be comfortable using Python programming concepts. As a big fan of coffee, animations and emoji, I decided to build a coffee machine with some ASCII art. I had build the same project in Kotlin, and decided to make it it in Python as well.
+
+> The project has no prospective client, it is built purely for fun, engagement and learning purposes
+
+#### User Stories
+- I want to be able to understand the purpose of the program
+- I want to able to make a choice from the displayed menu
+- I want to able to see coffee machine stats
+- I want to able to see coffee logo and animation
+- I want to able to quit the program
+
+#### User Goals
+- Engage with a simple terminal program that is fun and easy to operate
+
+#### Site Owner Goals
+- Create an easy to operate, and interactive terminal program
+- Add visually appealing features
+- Add a fortune cookie option to engage the user
+- Give an option to withdraw virtual money and exit
+
+## Structure
+
+The flowchart for the coffee machine simulator is as below:
+
+<img src="./readme-content/brew-flowchart.webp" alt="Coffee Simulator logical flow from power on, making a coffee choice and exiting the program">
+
+## User Interface - Surface
+
+ChatGPT was used for coffee animations. For text colors, Rich Text library was used. Coffee ASCII art is taken from https://ascii.co.uk/art/coffee with my own minor additions.
+
+
 
 
 
