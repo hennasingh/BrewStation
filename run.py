@@ -156,6 +156,10 @@ def buy_coffee():
 
 
 def check_machine_action(action):
+    """
+        This is a helper funtion that checks the user action and calls
+        relevant methods in response or points for an invalid action
+    """
     global status
 
     if action in ("buy", "buy coffee"):
