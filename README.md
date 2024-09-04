@@ -74,6 +74,25 @@ ChatGPT was used for coffee animations. For text colors, Rich Text library was u
 
 ![coffee stats and capacity message](./readme-content/fillMessage.png)
 
+### Error Handling
+
+- Error Handling on Incorrect Action Input
+
+![Invalid Action on incorrect prompt](./readme-content/wrongAction.png)
+
+- Error Handling on Incorrect coffee menu input
+
+![Incorrect input on coffee menu](./readme-content/wrongCoffee.png)
+
+- Error Handling on Incorrect value input
+
+![Incorrect Value on Fill Ingredients](./readme-content/wrongFillAmount.png)
+
+-Error Handling on Exceeding Ingredient Amount
+
+![Exceeding Fill Value](./readme-content/exceedFill.png)
+
+
 ## Deployment
 
 This project was deployed using Code Institute's mock terminal for Heroku.
