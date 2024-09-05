@@ -99,15 +99,34 @@ ChatGPT was used for coffee animations. For text colors, Rich Text library was u
 - Allow user to set machine ingredients when the machine is started.
 - Add a fortune cookie message along with a coffee animation
 
+## Testing
 
+Testing details can be found in testing.md
 
+## Technologies Used
+
+### Languages
+
+- [Python](https://www.python.org/) - Main language for the terminal program
+
+### Python Packages
+
+- [Rich Text](https://pypi.org/project/rich/) - For adding colors to text
+- [Art](https://pypi.org/project/art/) - For heading font style
+
+### Other Softwares
+
+- [Draw.io](https://app.diagrams.net/) - Used to create flowchart for the coffee machine
+- [Gitpod](https://www.gitpod.io/#get-started) - Used to code the project and save to online repo
+- [Github](https://github.com/) - For version control
 
 
 ## Deployment
 
 This project was deployed using Code Institute's mock terminal for Heroku.
 
-### Steps
+### Heroku 
+
 - Create an account on Heroku.
 - Navigate to Heroku Dashboard and "Create a New App".
 - Input App name and choose a region you are closer to.
@@ -117,20 +136,6 @@ This project was deployed using Code Institute's mock terminal for Heroku.
 - Seach for the repository name to connect.
 - Click on Deploy Branch or enable Automatic Deploy.
 - Allow a few minutes and view the deployed program.
-
-
-## Technologies Used
-
-- [Draw.io](https://app.diagrams.net/) - Used to create flowchart for the coffee machine
-- [Python](https://www.python.org/) - Main language for the terminal program
-- [Gitpod](https://www.gitpod.io/#get-started) - Used to code the project and save to online repo
-- [Github](https://github.com/) - For version control
-
-### Python Packages
-
-- [Rich Text](https://pypi.org/project/rich/) - For adding colors to text
-- [Art](https://pypi.org/project/art/) - For heading font style
-
 
 ## Credits
 
