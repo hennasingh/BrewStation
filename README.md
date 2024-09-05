@@ -92,6 +92,16 @@ ChatGPT was used for coffee animations. For text colors, Rich Text library was u
 
 ![Exceeding Fill Value](./readme-content/exceedFill.png)
 
+### Future Features
+
+- Allow user to fill the specified insufficient ingredient.
+- Loop back through the fill ingredients menu, after an invalid entry.
+- Allow user to set machine ingredients when the machine is started.
+- Add a fortune cookie message along with a coffee animation
+
+
+
+
 
 ## Deployment
 
