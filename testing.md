@@ -51,9 +51,7 @@ The user can choose the option from the menu to see the remaining coffee ingredi
 
 The program shows a coffee animation, after a choice is selected.
 
-<video controls>
-    <source src="./readme-content/coffeeAnime.mp4" type="video/mp4">
-</video>
+[![Coffee Animation Video](https://raw.githubusercontent.com/hennasingh/BrewStation/main/readme-content/welcomeArtMenu.png)](https://raw.githubusercontent.com/hennasingh/BrewStation/readme-content/coffeeAnime.mp4)
 
 > I want to able to quit the program
 
