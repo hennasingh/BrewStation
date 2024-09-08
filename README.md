@@ -101,7 +101,7 @@ ChatGPT was used for coffee animations. For text colors, Rich Text library was u
 
 ## Testing
 
-Testing details can be found in testing.md
+Testing details can be found in [testing.md](testing.md)
 
 ## Technologies Used
 
