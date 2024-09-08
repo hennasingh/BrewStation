@@ -47,12 +47,13 @@ The user can choose the option from the menu to see the remaining coffee ingredi
 
 ![coffee ingredients remaining](/readme-content/statsMessage.png)
 
-
 > I want to be able to see my coffee filling.
 
 The program shows a coffee animation, after a choice is selected.
 
-![coffee animation - coffee dripping in a mug](/readme-content/coffeeAnime.mp4)
+<video controls>
+    <source src="./readme-content/coffeeAnime.mp4" type="video/mp4">
+</video>
 
 > I want to able to quit the program
 
