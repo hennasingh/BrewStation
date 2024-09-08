@@ -75,7 +75,7 @@ Other Actions and Outcomes are as below:
 | Type 12 at the prompt and enter | Invalid input message and prompt to enter between (1-3) is displayed | Pass |
 | Type random text at the prompt | Invalid message and prompt to enter (1-3) is displayed | Pass |
 | Type 2 with a whitespace | Success Message and coffee animation is played | Pass |
-| Type "buy| again followed by "back" at the prompt | Menu goes back to main | Pass |
+| Type "buy again followed by "back" at the prompt | Menu goes back to main | Pass |
 | Type "buy" followed by 2 at the prompt | Sorry message specifying missing ingredient is displayed | Pass |
 
 ### Testing Fill Ingredients Option
