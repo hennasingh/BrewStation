@@ -68,7 +68,7 @@ def take_money():
     if machine_status['money'] == 0:
         console.print(
             """\n:unamused_face:\u0020 There is [red]0[/] balance in the
-            machine, you have taken all !""", style="plum4"
+        machine, you have taken all !""", style="plum4"
         )
         return
 
@@ -121,7 +121,7 @@ def fill_machine_ingredients():
                         """
                         .format((20 - machine_status[key]))
                     )
-            machine_status[key] += value
+                machine_status[key] += value
         machine_stats()
     except ValueError as e:
         console.print(
@@ -150,8 +150,8 @@ def get_coffee(choice, coffee):
     for key, value in zip(machine_status, choice):
         machine_status[key] -= value
 
-    return
-    ":smiley:\u0020 I have enough resources, making you a {}!".format(coffee)
+    return """:smiley:\u0020 I have enough resources,
+     making you a {}!""".format(coffee)
 
 
 def buy_coffee():
@@ -165,7 +165,7 @@ def buy_coffee():
         1 - espresso\n
         2 - latte\n
         3 - cappuccino\n
-        back - to main menu:\
+        back - to main menu:\n
         """).strip()
 
     message = ''
@@ -219,7 +219,7 @@ def start_coffee_machine():
     """
     while status:
         action = input(
-            """Write action (buy, fill...): \n
+            """\nWrite action (buy, fill...): \n
          \U0001F60B \u0020 Buy coffee
          \U0001F47E \u0020 Fill Ingredients
          \U0001F911 \u0020 Take money

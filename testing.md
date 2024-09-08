@@ -25,3 +25,39 @@ The initial run pointed few length and space errors as shown below:
 After fixing the pointed errors, another validation was done:
 
 ![python code with no errors in coffee animation code](/readme-content/pep8noErrorCoffee.png)
+
+## Manual Testing
+
+### Testing User Stories
+
+The following user stories were considered in the UX -Strategy phase
+
+> I want to be able to understand the purpose of the program
+
+> I want to be able to make a choice from the displayed menu
+
+The start of the program introduces the coffee machine simulation and provides user a menu to select a choice.
+
+![coffee ascii art welcoming user and displaying menu options to choose from](/readme-content/welcomeArtMenu.png)
+
+
+> I want to be able to see coffee machine stats
+
+The user can choose the option from the menu to see the remaining coffee ingredients.
+
+![coffee ingredients remaining](/readme-content/statsMessage.png)
+
+
+> I want to be able to see my coffee filling.
+
+The program shows a coffee animation, after a choice is selected.
+
+![coffee animation - coffee dripping in a mug](/readme-content/coffeeAnime.mp4)
+
+> I want to able to quit the program
+
+The exit option in the menu stops further execution of the program.
+
+
+
+
