@@ -49,9 +49,9 @@ The user can choose the option from the menu to see the remaining coffee ingredi
 
 > I want to be able to see my coffee filling.
 
-The program shows a coffee animation, after a choice is selected.
+The program shows a coffee animation, after a choice is selected. (The coffee video could not be uploaded)
 
-[![Coffee Animation Video](https://raw.githubusercontent.com/hennasingh/BrewStation/main/readme-content/welcomeMenu.png)](https://raw.githubusercontent.com/hennasingh/BrewStation/main/readme-content/coffeeAnime.mp4)
+![coffee mug with foam and coffee message](/readme-content/coffeeMug.png)
 
 > I want to able to quit the program
 
