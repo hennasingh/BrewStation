@@ -40,6 +40,10 @@ The flowchart for the coffee machine simulator is as below:
 
 ## User Interface - Surface
 
+It took a bit of time to finalise the structure, flow and design of the coffee machine simulator. I was still confused whether this would need a class model implementation or not. I got confirmation from my mentor, as this is one machine and I wont be creating multiple objects for it, it is fine to create it without a class.
+
+The menu flow was kept the same as advised in the project by Jetbrains Academy, but more colors, emojis, friendly messages, ASCII art was added to make it more engaging and fun.
+
 ChatGPT was used for coffee animations. For text colors, Rich Text library was used. Coffee ASCII art is taken from https://ascii.co.uk/art/coffee with my own minor additions.
 
 ## Features
