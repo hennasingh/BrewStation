@@ -102,7 +102,8 @@ def fill_machine_ingredients():
                         .format(key)).strip())
                 if value < 0:
                     raise ValueError("Please enter a positive value")
-                if (key == "water" or key == "milk") and machine_status[key] + value > 2000:
+                liquids = ['water', 'milk']
+                if key in liquids and machine_status[key] + value > 2000:
                     raise ValueError(
                         """The entered value exceeds 2000 ml for {},
                         please enter amount below 2000""".format(key)
