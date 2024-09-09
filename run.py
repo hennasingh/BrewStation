@@ -230,4 +230,5 @@ def start_coffee_machine():
         check_machine_action(action.strip().lower())
 
 
-start_coffee_machine()
+if __name__ == '__main__':
+    start_coffee_machine()
