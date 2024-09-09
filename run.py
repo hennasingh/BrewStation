@@ -98,7 +98,7 @@ def fill_machine_ingredients():
             if key != "money":
                 value = int(
                     input(
-                        "\nWrite how much amount of {} you want to add:\n"
+                        "\nWrite how much amount of {} you want to add:\n--> "
                         .format(key)).strip())
                 if value < 0:
                     raise ValueError("Please enter a positive value")
@@ -129,7 +129,7 @@ def fill_machine_ingredients():
         )
 
 
-def get_coffee(choice, coffee):
+def get_coffee(choice: list, coffee: str) -> str:
     """
     The function calculates the ingredients required for the choice of coffee
     and keep a log of remaining amount.
@@ -166,7 +166,7 @@ def buy_coffee():
         2 - latte\n
         3 - cappuccino\n
         back - to main menu:\n
-        """).strip()
+        --> """).strip()
 
     message = ''
 
@@ -192,7 +192,7 @@ def buy_coffee():
         coffee.fill_coffee_mug()
 
 
-def check_machine_action(action):
+def check_machine_action(action: str):
     """
         This is a helper funtion that checks the user action and calls
         relevant methods in response or points for an invalid action
@@ -224,7 +224,7 @@ def start_coffee_machine():
          \U0001F47E \u0020 Fill Ingredients
          \U0001F911 \u0020 Take money
          \U0001F47B \u0020 Remaining
-         \U0001F62D \u0020 Exit\n"""
+         \U0001F62D \u0020 Exit\n--> """
         )
         check_machine_action(action.strip().lower())
 

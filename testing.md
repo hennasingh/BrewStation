@@ -120,7 +120,14 @@ This is my first time using python and I learnt a lot while working on this pyth
 
 4. Finalizing on Python Linter took time. The previous students mentioned about pycodestyle , while vs code complained about deprecation of the same. I installed Pylint and then Flake8 and also tried Ruff. This was quite an exploration to number of linters available for Python. I finally validated using Linter provided by Code Institute. Although, some lines are longer than others as I was not able to move condition statement to new line. Some longer lines messed up print messages. They appeared halfway in the new line. 
 
+<details><summary>Take Menu Message</summary>
+
 ![message on taking the money](/readme-content/takeMsg.png)
+</details>
+
+5. In my quest to learn more about Python, my mentor suggested me to use [typing - support for type hints](https://docs.python.org/3/library/typing.html#module-typing) module. I added type hints in my methods wherever it was needed.
+
+6. My mentor discussed what `if __name__== '__main__'` does in Python. Although I still do not fully understand it, as my code works well even without it. This [article](https://builtin.com/articles/name-python#:~:text=%E2%80%9CIf%20__name__%3D%3D%20',main%20method%20should%20be%20executed.&text=If%20you%20are%20new%20to,or%20without%20a%20main%20method) explains more on why a python function works without a main method.
 
 As this was a simple coffee machine simulator, I did not have encountered lot of bugs while designing it. There were some gotchas in input values that needed error handling but other than that, it was easy to build. I am happy to make somthing in a language I have never used before.
 
