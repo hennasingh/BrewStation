@@ -108,6 +108,26 @@ For recurring testing, the menu option "Fill" has to be typed everytime an inval
 | Type "exit" at the prompt | The program stops executing further | Pass |
 
 
+## Struggles, Learnings and AHA Moments
+
+This is my first time using python and I learnt a lot while working on this python program. I think I found the language very fascinating.
+
+1. The first struggle and AHA moment was font and color choosing. I had no idea terminal programs could be colorful. I saw previous students projects and found out about colors and ASCII art. A friend of mine suggested rich python library and I discovered about art library while researching for coffee art. The [coffee ASCII art](https://ascii.co.uk/art/coffee) was another AHA moment. I only discovered then that the art is printed as is. It took a bit of patience to print both machine and coffee mug adjacent to each other.
+
+2. Another struggle was on putting the right spaces and new line characters after each dialogue. It appeared very close to each other. Adding space did not work as I expected. I explored about unicode characters and added unicode alongside each emoji to put a space. Adding "\n" within the print statement of the dialogue adding some spacing in the conversation.
+
+3. Input error handling for "fill" menu was challenging. The strategic way I finalized was adding maximum capacity to the machine so random numbers are not added. The user experience for this section can be improved, as the function comes back to the main menu, if an invalid input is provided.
+
+4. Finalizing on Python Linter took time. The previous students mentioned about pycodestyle , while vs code complained about deprecation of the same. I installed Pylint and then Flake8 and also tried Ruff. This was quite an exploration to number of linters available for Python. I finally validated using Linter provided by Code Institute. Although, some lines are longer than others as I was not able to move condition statement to new line. Some longer lines messed up print messages. They appeared halfway in the new line. 
+
+![message on taking the money](/readme-content/takeMsg.png)
+
+As this was a simple coffee machine simulator, I did not have encountered lot of bugs while designing it. There were some gotchas in input values that needed error handling but other than that, it was easy to build. I am happy to make somthing in a language I have never used before.
+
+## Unresolved Bugs
+
+There are no known unresolved bugs in the program.
+
 
 
 
