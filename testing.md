@@ -16,6 +16,10 @@ All errors were fixed except one, as it was difficult to split the condition in 
 
 ![successful python code validation](/readme-content/pep8noErrors.png)
 
+Based on mentors suggestion, the condition was broken into two lines and passed validation:
+
+![python linter shows no errors](/readme-content/noLintErrors.png)
+
 __Testing coffee.py__
 
 The initial run pointed few length and space errors as shown below:
