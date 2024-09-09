@@ -50,11 +50,13 @@ ChatGPT was used for coffee animations. For text colors, Rich Text library was u
 
 ### Existing Features
 
-- A welcome screen with ASCII art and predefined menu is displayed.
+#### Welcome Screen
+A welcome screen with ASCII art and predefined menu is displayed.
 
 ![Welcome msg and Menu Options](./readme-content/welcomeMenu.png)
 
-- Entering buy coffee displays options to buy or go back to main meny again.
+#### Buy Coffee Menu
+ Entering buy coffee displays options to buy or go back to main meny again.
 
 ![Coffee menu display](./readme-content/buyMenu.png)
 
@@ -66,15 +68,18 @@ ChatGPT was used for coffee animations. For text colors, Rich Text library was u
 
 ![Not enough resources for coffee message](./readme-content/failedBuy.png)
 
-- Entering take gives away collected money and money is updated.
+#### Take Menu Option
+Entering take gives away collected money and money is updated.
 
 ![amount of money given and left message](./readme-content/takeMessage.png)
 
-- Entering  Remaining display machine ingredients status on that moment.
+#### Remaining Menu Option
+Entering  Remaining display machine ingredients status on that moment.
 
 ![coffee ingredients value message](./readme-content/statsMessage.png)
 
-- Entering fill display machine stats and specify machine capacity and ask for amount of each ingredient
+#### Fill Menu Option
+Entering fill display machine stats and specify machine capacity and ask for amount of each ingredient
 
 ![coffee stats and capacity message](./readme-content/fillMessage.png)
 
@@ -111,6 +116,8 @@ Testing details can be found in [testing.md](testing.md)
 
 ### Languages
 
+- HTML - For layout of the terminal
+- CSS - For background and flex display of the mock terminal
 - [Python](https://www.python.org/) - Main language for the terminal program
 
 ### Python Packages
