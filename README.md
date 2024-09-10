@@ -130,6 +130,8 @@ Testing details can be found in [testing.md](testing.md)
 - [Draw.io](https://app.diagrams.net/) - Used to create flowchart for the coffee machine
 - [Gitpod](https://www.gitpod.io/#get-started) - Used to code the project and save to online repo
 - [Github](https://github.com/) - For version control
+- [Code Institute Python Linter](https://pep8ci.herokuapp.com/) - For python code validation
+- [Heroku](https://id.heroku.com/login) - For terminal deployment
 
 
 ## Deployment
@@ -154,6 +156,7 @@ This project was deployed using Code Institute's mock terminal for Heroku.
 
 - [Stack Overflow](https://stackoverflow.com/questions/52335970/how-to-fix-syntaxwarning-invalid-escape-sequence-in-python) - For correcting invalid excape sequence warning
 - [Jetbrains Python Academy](https://github.com/Flor91/jetbrains-python-academy/tree/master/Coffee%20Machine) - For inspiration on Coffee Machine project
+- [Typing Hints](https://docs.python.org/3/library/typing.html) - For python typing hints
 
 ### Media
 - [Geeks for Geeks](https://www.geeksforgeeks.org/python-program-to-print-emojis/) - Unicodes to print emojis
@@ -165,6 +168,3 @@ This project was deployed using Code Institute's mock terminal for Heroku.
 - [Code Institute](https://codeinstitute.net/) for Python essentials and Love Sandwiches project
 - Spencer Barriball  - For his guidance and review on the project
 - Code Institute Slack Community - For feedback, reviews and community support.
-
-
-
